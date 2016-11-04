@@ -1,0 +1,42 @@
+@import models.Product
+
+@(carts: Seq[(Product, Int)])(implicit messages: Messages, request: RequestHeader)
+
+@main(messages("home.title")) {
+  <h1>Welcome to My App!</h1>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>@messages("cart.product.name.head")</th>
+          <th>@messages("cart.product.count.head")</th>
+          <th>@messages("cart.product.subtotal.head")</th>
+          <th>@messages("cart.remove.item.head")</th>
+        </tr>
+      </thead>
+      <tbody>
+        @carts.map { case (product, count) =>
+          <tr>
+            <td>
+              <a href="@routes.MyController.showProduct(product.id)">
+                @product.name
+              </a>
+            </td>
+            <td>@count</td>
+            <td>
+              @{product.price * count}
+            </td>
+            <td>
+              @helper.form(action = routes.MyController.removeCart(product.id)) {
+                @helper.CSRF.formField
+                <button type="submit">@messages("cart.remove.item.button")</button>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  @footer()
+}

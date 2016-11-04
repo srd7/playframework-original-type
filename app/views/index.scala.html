@@ -1,5 +1,19 @@
-@()
+@import models.typesafe.UserId
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+@(loginForm: Form[(UserId, String)])(implicit messages: Messages, request: RequestHeader)
+
+
+@implicitFieldConstructor = @{helper.FieldConstructor(views.html.elements(_))}
+
+@main(messages("login.form.title")) {
+  <h1>Welcome to My App!</h1>
+  @helper.form(action = routes.MyController.login()) {
+    @helper.CSRF.formField
+    @helper.inputText(loginForm("userId"), 'label -> messages("login.form.user.id"))
+    @helper.inputPassword(loginForm("password"), 'label -> messages("login.form.password"))
+    <button type="submit">@messages("login.form.submit")</button>
+    @loginForm.errors.map { error =>
+      <p class="error">@error.message</p>
+    }
+  }
 }

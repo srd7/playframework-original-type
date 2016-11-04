@@ -1,0 +1,13 @@
+@(elements: helper.FieldElements)
+
+@className = { @if(elements.hasErrors) { error } }
+@id = {@elements.args.get('id) }
+
+<div class="@{className}" id="@{id}">
+  <label for="@{elements.id}">
+    @elements.args.get('label).getOrElse(elements.label)
+  </label>
+  <div>
+    @elements.input
+  </div>
+</div>

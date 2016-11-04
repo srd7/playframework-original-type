@@ -1,0 +1,18 @@
+@import models.Product
+
+@()(implicit messages: Messages, request: RequestHeader)
+
+<div>
+  <a href="@routes.MyController.home()">
+    @messages("home.link")
+  </a>
+  &nbsp;
+  <a href="@routes.MyController.showCart()">
+    @messages("cart.link")
+  </a>
+  &nbsp;
+  <a href="@routes.MyController.logout()">
+    @messages("logout.link")
+  </a>
+</div>
+

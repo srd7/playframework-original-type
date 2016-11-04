@@ -1,1 +1,48 @@
 # https://www.playframework.com/documentation/latest/ScalaI18N
+
+################################################################
+# Error
+error.title = Error!!
+error.occurred = Error occurred, sorry...
+
+################################################################
+# Login form
+login.form.title = Login Form
+login.form.user.id = User ID
+login.form.password = Password
+login.form.submit = Log in
+
+################################################################
+# Home
+home.title = Top Page
+home.link = Top Page
+
+################################################################
+# Product
+product.name.table.head = Name
+product.price.table.head = Price
+product.put.cart.table.head = Put to Cart
+
+product.put.cart.button = Put to Cart
+
+product.not.found.title = Product Not Found
+product.not.found.message = Product Not Found.
+
+################################################################
+# Cart
+cart.link = Cart
+
+cart.product.name.head = Product Name
+cart.product.count.head = Count
+cart.product.subtotal.head = Subtotal
+cart.remove.item.head = Remove from Cart
+
+cart.remove.item.button = Remove from Cart
+
+################################################################
+# Other
+action.done = Action Done!!
+
+################################################################
+# Logout
+logout.link = Logout

@@ -1,0 +1,48 @@
+# https://www.playframework.com/documentation/latest/ScalaI18N
+
+################################################################
+# エラー
+error.title = エラー!!
+error.occurred = エラーが発生しました。
+
+################################################################
+# ログインフォーム
+login.form.title = ログインフォーム
+login.form.user.id = ユーザーID
+login.form.password = パスワード
+login.form.submit = ログイン
+
+################################################################
+# ホーム
+home.title = トップページ
+home.link = トップページへ
+
+################################################################
+# Product
+product.name.table.head = 商品名
+product.price.table.head = 価格
+product.put.cart.table.head = カートに入れる
+
+product.put.cart.button = カートに入れる
+
+product.not.found.title = 商品が見つかりませんでした
+product.not.found.message = 商品が見つかりませんでした
+
+################################################################
+# Cart
+cart.link = カートを見る
+
+cart.product.name.head = 商品名
+cart.product.count.head = 個数
+cart.product.subtotal.head = 小計
+cart.remove.item.head = カートから削除
+
+cart.remove.item.button = カートから削除
+
+################################################################
+# Other
+action.done = 操作が完了しました！
+
+################################################################
+# Logout
+logout.link = ログアウト

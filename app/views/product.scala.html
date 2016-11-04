@@ -1,0 +1,32 @@
+@import models.Product
+@import models.typesafe.ProductId
+
+@(product: Product, productIdForm: Form[ProductId])(implicit messages: Messages, request: RequestHeader)
+
+@main(product.name) {
+  <h1>Welcome to My App!</h1>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <th>@messages("product.name.table.head")</th>
+          <td>@product.name</td>
+        </tr>
+        <tr>
+          <th>@messages("product.price.table.head")</th>
+          <td>@product.price</td>
+        </tr>
+        <tr>
+          <th>@messages("product.put.cart.table.head")</th>
+          <td>
+            @helper.form(action = routes.MyController.addCart()) {
+              @helper.CSRF.formField
+              <input type="hidden" value="@product.id" name="@{productIdForm("productId").name}">
+              <button type="submit">@messages("product.put.cart.button")</button>
+            }
+          </td>
+      </tbody>
+    </table>
+  </div>
+  @footer()
+}
