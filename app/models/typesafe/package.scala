@@ -1,7 +1,5 @@
 package models.typesafe
 
-import slick.driver.H2Driver.api._
-
 // オリジナル型たち。
 // private[typesafe] としているのは、
 // 各種マッパー定義の時点では value にアクセスできる必要があるから。

@@ -12,7 +12,9 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play"    % "1.5.1" % Test,
   "com.typesafe.play"      %% "play-slick"            % "2.0.0",
   "com.typesafe.play"      %% "play-slick-evolutions" % "2.0.0",
-  "com.h2database"         %  "h2"                    % "1.4.193"
+  "com.h2database"         %  "h2"                    % "1.4.193",
+  "org.specs2"             %% "specs2"                % "3.7",
+  "com.typesafe.play"      %% "play-specs2"           % "2.5.9"
 )
 
 // オリジナルID型を conf/routes でも読めるようにする
